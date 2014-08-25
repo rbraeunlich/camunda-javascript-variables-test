@@ -44,7 +44,6 @@ public class SimpleTestCase {
     HistoryService historyService = rule.getHistoryService();
     
     ProcessInstance pi = runtimeService.startProcessInstanceByKey("testProcess");
-    assertEquals(1, runtimeService.createProcessInstanceQuery().count());
 
     assertThat(historyService.createHistoricProcessInstanceQuery().count(), is(1L));
     List<HistoricVariableInstance> list = historyService.createHistoricVariableInstanceQuery().list();

@@ -1,6 +1,8 @@
 package org.camunda.bpm.unittest;
 
-public class MyJavaClass {
+import java.io.Serializable;
+
+public class MyJavaClass implements Serializable {
 
 	private int arg1;
 	private String arg2;

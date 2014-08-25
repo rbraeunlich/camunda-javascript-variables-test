@@ -7,9 +7,9 @@
     <bpmn2:scriptTask id="ScriptTask_1" name="Save variables" scriptFormat="JavaScript">
       <bpmn2:incoming>SequenceFlow_1</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_2</bpmn2:outgoing>
-      <bpmn2:script><![CDATA[importPackage(Packages.org.camunda.bpm.unittest)
-execution.setVariable(1234,new MyJavaClass(1,"foo"))
-execution.setVariable(1235,new MyJavaClass(2,"bar"))]]></bpmn2:script>
+      <bpmn2:script><![CDATA[
+execution.setVariable(1234, new org.camunda.bpm.unittest.MyJavaClass(1,"foo"))
+execution.setVariable(1235, new org.camunda.bpm.unittest.MyJavaClass(2,"bar"))]]></bpmn2:script>
     </bpmn2:scriptTask>
     <bpmn2:sequenceFlow id="SequenceFlow_1" name="" sourceRef="StartEvent_1" targetRef="ScriptTask_1"/>
     <bpmn2:endEvent id="EndEvent_1">
